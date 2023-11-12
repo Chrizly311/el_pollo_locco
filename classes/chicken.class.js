@@ -13,6 +13,8 @@ class Chicken extends MovableObject {
        
         this.y = y;
         this.x = 200 + Math.random() * 500;
+
+        this.speed = 0.25 + Math.random() * 0.25;
         this.animate();
     }
 
@@ -23,5 +25,7 @@ class Chicken extends MovableObject {
         this.img = this.imageCache[path];
         this.currentImage++;
         }, 150)
+
+        this.moveLeft();
     }
 }
